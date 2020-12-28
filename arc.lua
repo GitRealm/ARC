@@ -8,6 +8,7 @@ while true do
 		if energyStored == 0 then
 			reactor.setActive(true)
 		end
-	else reactor.setActive(false)
+	elseif state and (energyStored > threshold) then
+		reactor.setActive(false)
 	end
 end
